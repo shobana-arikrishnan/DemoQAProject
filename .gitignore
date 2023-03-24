@@ -1,0 +1,7 @@
+.metals/
+.vscode/
+.venv/
+geckodriver.log
+.idea/
+__pycache__/
+*.py[cod]
