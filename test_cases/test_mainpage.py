@@ -15,13 +15,13 @@ class TestMainPage:
         self.driver.quit()
 
     @pytest.fixture
-    def start_page(self,driver):
+    def startup_page(self,driver):
         yield DemoQAMainPage(self.driver)
 
     @pytest.fixture
-    def setup_page(self,start_page):
-        start_page.browsepage()
-        yield start_page
+    def setup_page(self,startup_page):
+        startup_page.browsepage()
+        yield startup_page
 
     def test_title(self,setup_page):
         assert setup_page.check_title()
